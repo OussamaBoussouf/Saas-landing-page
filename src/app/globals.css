@@ -10,18 +10,43 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .mask-content{
-    mask-image: linear-gradient(to right, transparent 12%, black, transparent 88%);
-    -webkit-mask-image: linear-gradient(to right, transparent 12%, black, transparent 88%);
+  .text-rainbow-gradient {
+    background: linear-gradient(
+      to right,
+      #dd7dff,
+      #e1cd86,
+      #8bcb92,
+      #71c2ef,
+      #3bffff
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+  
+  .mask-content {
+    mask-image: linear-gradient(
+      to right,
+      transparent 12%,
+      black,
+      transparent 88%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 12%,
+      black,
+      transparent 88%
+    );
+  }
+
 }
 
-@layer components{
+@layer components {
   .btn {
     @apply inline-flex items-center tracking-tight font-medium rounded-md px-[15px] py-[10px];
   }
 
-  .btn-primary{
+  .btn-primary {
     @apply bg-black text-white;
   }
 
@@ -29,11 +54,7 @@
     @apply text-black bg-transparent;
   }
 
-  .tag{
+  .tag {
     @apply text-sm w-fit font-bold rounded-lg tracking-tight border border-[#222]/10 px-3 py-1;
   }
 }
-
-
-
-
