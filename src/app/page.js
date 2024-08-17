@@ -1,9 +1,11 @@
+import CallToAction from "./sections/CallToAction";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import LogoTicker from "./sections/LogoTicker";
 import Management from "./sections/Management";
 import Pricing from "./sections/Pricing";
 import ProductShowcase from "./sections/ProductShowcase";
+import Testimonials from "./sections/Testimonials";
 
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
       <ProductShowcase/>
       <Management/>
       <Pricing/>
+      <Testimonials/>
+      <CallToAction/>
     </>
   );
 }

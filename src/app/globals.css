@@ -23,7 +23,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .mask-content {
     mask-image: linear-gradient(
       to right,
@@ -39,6 +39,22 @@
     );
   }
 
+  .mask-testimonial {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 25%,
+      black 75%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 3%,
+      black 25%,
+      black 75%,
+      transparent
+    );
+  }
 }
 
 @layer components {
