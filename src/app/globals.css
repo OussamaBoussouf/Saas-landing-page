@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body{
+  scroll-behavior: smooth;
+}
+
 @layer utilities {
   .text-gradient-black {
     background: -webkit-linear-gradient(#000000, #001354);

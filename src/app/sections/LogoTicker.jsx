@@ -21,8 +21,8 @@ export default function LogoTicker() {
       <div className="container mx-auto px-6">
       <div className="mask-content overflow-hidden">
         <div className="flex flex-none justify-center gap-8 lg:gap-16">
-          {companies.map((company) => (
-            <Image className="h-8 w-auto" key={company} src={company} alt={company} />
+          {companies.map((company, index) => (
+            <Image className="h-8 w-auto" key={index} src={company} alt={company} />
           ))}
         </div>
       </div>
