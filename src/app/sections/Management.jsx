@@ -20,8 +20,8 @@ export default function Management() {
           </p>
         </div>
         <div className="flex flex-col gap-6 mt-16 max-w-[972px] items-center lg:flex-row lg:mx-auto">
-          <div className="text-center bg-white shadow-xl rounded-2xl py-8 px-7 max-w-[486px]">
-            <Image className="mx-auto" src={cubeHelix} width={329} />
+          <div className="border text-center bg-white shadow-xl rounded-2xl py-8 px-7 max-w-[486px]">
+            <Image className="mx-auto" src={cubeHelix} width={329} alt="random shape" />
             <h2 className="text-gradient-black font-bold text-xl mb-2 tracking-tight">
               Integration ecosystem
             </h2>
@@ -30,8 +30,8 @@ export default function Management() {
               keeping all your essentials in one place.
             </p>
           </div>
-          <div className="text-center bg-white shadow-xl rounded-2xl py-8 px-7 max-w-[486px]">
-            <Image className="mx-auto" src={cubeImage} width={329} />
+          <div className="border text-center bg-white shadow-xl rounded-2xl py-8 px-7 max-w-[486px]">
+            <Image className="mx-auto" src={cubeImage} width={329} alt="random shape" />
             <h2 className="text-gradient-black font-bold text-xl mb-2 tracking-tight">
               Goal setting and tracking
             </h2>

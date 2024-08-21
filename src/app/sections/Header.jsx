@@ -17,7 +17,7 @@ export default function Header() {
           <ArrowRight />
         </div>
       </div>
-      <div className="py-5 px-6 lg:px-0 backdrop-blur-sm">
+      <div className="py-5 px-6 xl:px-0 backdrop-blur-sm">
         <div className="container flex items-center justify-between mx-auto">
           <Image src={Logo} alt="Sass logo" width={40} height={40} />
           <Menu className="md:hidden" />

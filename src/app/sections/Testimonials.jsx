@@ -1,60 +1,69 @@
-import avatarImage from "@/assets/images/avatar.png";
+
+import avatarOne from "@/assets/images/avatar1.png";
+import avatarTwo from "@/assets/images/avatar2.png";
+import avatarThree from "@/assets/images/avatar3.png";
+import avatarFour from "@/assets/images/avatar4.png";
+import avatarFive from "@/assets/images/avatar5.png";
+import avatarSix from "@/assets/images/avatar6.png";
+import avatarSeven from "@/assets/images/avatar7.png";
+import avatarEight from "@/assets/images/avatar8.png";
+import avatarNine from "@/assets/images/avatar9.png";
 import TestimonialColumn from "@/app/components/TestimonialColumn.jsx";
 
 const testimonials = [
   {
     text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    image: avatarImage,
+    image: avatarOne,
     name: "Alex Rivera",
     email: "@jamietechguru00",
   },
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    image: avatarImage,
-    name: "Alex Rivera",
-    email: "@jamietechguru00",
+    text: "Our team's productivity has skyrocketed since we started using this tool.",
+    image: avatarTwo,
+    name: "Josh Smith",
+    email: "@jjsmith",
   },
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    image: avatarImage,
-    name: "Alex Rivera",
-    email: "@jamietechguru00",
+    text: "This app has completely transformed how I manage my projects and deadlines.",
+    image: avatarThree,
+    name: "Morgan Lee",
+    email: "@morganleewhiz",
   },
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    image: avatarImage,
-    name: "Alex Rivera",
-    email: "@jamietechguru00",
+    text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
+    image: avatarFour,
+    name: "Casey Jordan",
+    email: "@caseyj",
   },
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    image: avatarImage,
-    name: "Alex Rivera",
-    email: "@jamietechguru00",
+    text: "Adopting this app for our team has streamlined our project management and improved communication across the board. ",
+    image: avatarFive,
+    name: "Jordan Patels",
+    email: "@jpatelsdesign",
   },
   {
     text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
-    image: avatarImage,
-    name: "Alex Rivera",
-    email: "@jamietechguru00",
+    image: avatarSix,
+    name: "Taylor Kim",
+    email: "@taylorkimm",
   },
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    image: avatarImage,
-    name: "Alex Rivera",
-    email: "@jamietechguru00",
+    text: "The customizability and integration capabilities of this app are top-notch.",
+    image: avatarSeven,
+    name: "Riley Smith",
+    email: "@rileysmith1",
   },
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    image: avatarImage,
-    name: "Alex Rivera",
-    email: "@jamietechguru00",
+    text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
+    image: avatarEight,
+    name: "Sam Dawson",
+    email: "@dawsontechtips",
   },
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    image: avatarImage,
-    name: "Alex Rivera",
-    email: "@jamietechguru00",
+    text: "Its user-friendly interface and robust features support our diverse needs.",
+    image: avatarNine,
+    name: "Casey Harper",
+    email: "@casey09",
   },
 ];
 
@@ -81,10 +90,10 @@ export default function Testimonials() {
       </div>
       <div className="mt-16">
       <div className="flex justify-center gap-6">
-        <div className="flex gap-6 mask-testimonial">
+        <div className="flex gap-6 pb-6 mask-testimonial">
           <TestimonialColumn  testimonials={firstColumn}/>
-          <TestimonialColumn className="hidden md:flex" testimonials={secondColumn}/>
-          <TestimonialColumn className="hidden lg:flex" testimonials={thirdColumn}/>
+          <TestimonialColumn duration={19} className="hidden md:block" testimonials={secondColumn}/>
+          <TestimonialColumn duration={17} className="hidden lg:block" testimonials={thirdColumn}/>
         </div>
       </div>
       </div>

@@ -20,7 +20,7 @@ export default function Footer() {
             <a href="#">Help</a>
             <a href="#">Careers</a>
           </nav>
-          <nav className="flex gap-6">
+          <ul className="flex gap-6">
             <li>
               <XIcon />
             </li>
@@ -36,7 +36,7 @@ export default function Footer() {
             <li>
               <YoutubeIcon />
             </li>
-          </nav>
+          </ul>
           <p className="text-center tracking-tight text-sm text-[#7B7B7B] mt-5">&copy; 2024 You Company.Inc All rights reserved.</p>
         </div>
       </div>

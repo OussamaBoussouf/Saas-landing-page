@@ -1,5 +1,7 @@
+"use client"
 import CheckIcon from "@/assets/icons/tick.svg";
 import CheckIconWhite from "@/assets/icons/tick-white.svg";
+import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
 const pricingTiers = [
@@ -75,7 +77,10 @@ export default function Pricing() {
           {pricingTiers.map((tier, index) => (
             <div
               key={index}
-              className={twMerge("shadow-[0_7px_14px_#EAEAEA] border-[#F1F1F] rounded-2xl p-9 max-w-xs", tier.inverse && "bg-black border-black text-white")}
+              className={twMerge(
+                "shadow-[0_7px_14px_#EAEAEA] border border-[#F1F1F] rounded-2xl p-9 max-w-xs",
+                tier.inverse && "bg-black border-black text-white"
+              )}
             >
               <div className="flex itmes-center justify-between">
                 <h3 className="font-bold text-[#6F6C90] text-lg">
@@ -83,25 +88,36 @@ export default function Pricing() {
                 </h3>
                 {tier.popular && (
                   <div className="to inline-flex items-center border-[1px] border-white/20 rounded-lg py-1 px-3">
-                    <span className="text-sm tracking-tight bg-clip-text text-transparent text-rainbow-gradient font-medium">
+                    <motion.span
+                    animate={{backgroundPositionX: "-100%"}}
+                      transition={{duration: 2, ease:"linear", repeat: Infinity, repeatType:"loop" }}
+                      className="text-sm tracking-tight bg-clip-text text-transparent [background-size:200%]  bg-[linear-gradient(to_right,#dd7dff,#e1cd86,#8bcb92,#71c2ef,#3bffff,#dd7dff,#e1cd86,#8bcb92,#71c2ef,#3bffff)] font-medium"
+                    >
                       Most Popular
-                    </span>
+                    </motion.span>
                   </div>
                 )}
               </div>
               <div className="my-10">
-                <span className="font-bold text-5xl tracking-tight leading-none">${tier.monthlyPrice}</span>
-                <span className="text-base font-bold text-[#6F6C90] tracking-tight">/monthly</span>
+                <span className="font-bold text-5xl tracking-tight leading-none">
+                  ${tier.monthlyPrice}
+                </span>
+                <span className="text-base font-bold text-[#6F6C90] tracking-tight">
+                  /monthly
+                </span>
               </div>
               <button
-                className={twMerge("btn btn-primary w-full justify-center", tier.inverse && "text-black bg-white")}
+                className={twMerge(
+                  "btn btn-primary w-full justify-center",
+                  tier.inverse && "text-black bg-white"
+                )}
                 type="button"
               >
                 {tier.buttonText}
               </button>
               <ul className="flex flex-col gap-6 mt-10">
-                {tier.features.map((feature) => (
-                  <li className="text-sm flex items-center gap-4">
+                {tier.features.map((feature, index) => (
+                  <li key={index} className="text-sm flex items-center gap-4">
                     {tier.inverse ? <CheckIconWhite /> : <CheckIcon />}
                     <span className="tracking-tight">{feature}</span>
                   </li>

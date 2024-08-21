@@ -2,28 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-  scroll-behavior: smooth;
-}
-
 @layer utilities {
   .text-gradient-black {
     background: -webkit-linear-gradient(#000000, #001354);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .text-rainbow-gradient {
-    background: linear-gradient(
-      to right,
-      #dd7dff,
-      #e1cd86,
-      #8bcb92,
-      #71c2ef,
-      #3bffff
-    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

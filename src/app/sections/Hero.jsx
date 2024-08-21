@@ -1,21 +1,24 @@
 "use client";
-import ArrowRight from "@/assets/icons/arrow-b.svg";
+import TextButton from "../components/TextButton.jsx";
+
 import cogImage from "@/assets/images/visual.png";
 import cylinderImage from "@/assets/images/cylinder.png";
 import noodleImage from "@/assets/images/nodle.png";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import { useRef } from "react";
 
-function useParallax(value, distance) {
-  return useTransform(value, [0, 1], [0, -distance]);
-}
+
+
 
 export default function Hero() {
-  const { scrollYProgress } = useScroll();
-  const y = useParallax(scrollYProgress, 500);
-
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start end","end start"]
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
-    <section className="pt-8 pb-20 md:pt-5 md:pb-10 px-6 lg:px-0  md:mt-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
+    <section ref={heroRef} className="pt-8 pb-20 md:pt-5 md:pb-10 px-6 xl:px-0  md:mt-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
       <div className="container mx-auto">
         <div className="md:flex items-center justify-between">
           <div className="md:w-[478px]">
@@ -32,10 +35,7 @@ export default function Hero() {
               <button type="button" className="btn btn-primary">
                 Get for free
               </button>
-              <button type="button" className="btn btn-text gap-1">
-                <span>Learn more </span>
-                <ArrowRight className="h-5 w-5" />
-              </button>
+              <TextButton/>
             </div>
           </div>
           <div className="mt-20 md:mt-0 md:h-[648px] md:w-[50%] lg:flex-0 md:relative">
@@ -45,7 +45,7 @@ export default function Hero() {
               transition={{
                 duration: 2,
                 ease: "easeInOut",
-                repeatType: "reverse",
+                repeatType: "mirror",
                 repeat: Infinity,
               }}
               src={cogImage.src}
